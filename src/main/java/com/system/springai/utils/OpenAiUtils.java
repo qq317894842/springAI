@@ -66,7 +66,7 @@ public class OpenAiUtils {
         PARMS.put("OpenAi49", new OpenAi("OpenAi49", "面试", "生成面试题", "text-davinci-003", "创建10道%s相关的面试题（中文）：\n", 0.5, 1.0, 10.0, 0.0, 0.0, ""));
     }
 
-    public static String OPENAPI_TOKEN = "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";
+    public static String OPENAPI_TOKEN = "";
     public static Integer TIMEOUT = 30000;
 
     /**
