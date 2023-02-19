@@ -1,0 +1,62 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.108.5.84:3306/sps_db?allowMultiQueries=true&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123
+    #初始化数据
+    #    schema: classpath:sql/tables.sql
+    #    data: classpath:sql/data.sql
+    sql-script-encoding: utf-8
+    initialization-mode: ALWAYS
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 50
+      auto-commit: true
+      connection-timeout: 600000
+      connection-test-query: SELECT 1 FROM dual
+
+
+
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+
+
+# LOG
+#logging:
+#  config: classpath:logback-spring.xml
+
+
+server:
+  port: 8089
+
+swagger:
+  enable: true
+  application-name: poc-api
+  application-version: 1.0
+  application-description: springfox swagger 1.0
+  try-host: http://localhost:${server.port}
+
+# 忽略鉴权url
+ignored:
+  urls:
+    - /druid/**
+    - /swagger-ui.html
+    - /swagger-resources/**
+    - /swagger/**
+    - /**/v2/api-docs
+    - /**/*.js
+    - /**/*.css
+    - /**/*.png
+    - /**/*.ico
+    - /test/**
+    - /api/general/password
+    - /api/general/code
+    - /doc.html
+    - /webjars/**
+    - /**
+#rest:
+#  url: http://172.16.29.47:41002/api/services/app/User/GetByIds

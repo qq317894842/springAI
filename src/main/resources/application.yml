@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: springai
+  profiles:
+    active: dev
+
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 317894842@qq.com
+    password: igsympcdilwjbhae
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+          ssl:
+            enable: true
+          socketFactory:
+            port: 465
+    protocol: smtp
