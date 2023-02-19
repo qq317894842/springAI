@@ -104,7 +104,7 @@ public class OpenAiUtils {
      */
     public static List<CompletionChoice> getQuestionAnswer(String question) {
         OpenAi openAi = PARMS.get("OpenAi01");
-        return getAiResult(openAi, String.format("", question));
+        return getAiResult(openAi, String.format(openAi.getPrompt(), question));
     }
 
     /**

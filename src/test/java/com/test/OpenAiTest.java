@@ -16,7 +16,7 @@ public class OpenAiTest {
      */
     @Test
     public void testQA(){
-        List<CompletionChoice> questionAnswer = OpenAiUtils.getQuestionAnswer("写一首诗，春游，七言格式");
+        List<CompletionChoice> questionAnswer = OpenAiUtils.getQuestionAnswer("重庆今天的天气怎么样？");
         for (CompletionChoice completionChoice : questionAnswer) {
             System.out.println(completionChoice.getText());
         }
